@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 import DeleteUserForm from './Partials/DeleteUserForm';
@@ -37,3 +39,8 @@ export default function Edit({ mustVerifyEmail, status }) {
         </AuthenticatedLayout>
     );
 }
+
+Edit.propTypes = { 
+    mustVerifyEmail: PropTypes.bool, 
+    status: PropTypes.string
+};

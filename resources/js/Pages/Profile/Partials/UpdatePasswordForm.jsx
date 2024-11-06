@@ -1,9 +1,11 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Transition } from '@headlessui/react';
-import { useForm } from '@inertiajs/react';
+import { useForm, route } from '@inertiajs/react';
 import { useRef } from 'react';
 
 export default function UpdatePasswordForm({ className = '' }) {
@@ -139,4 +141,8 @@ export default function UpdatePasswordForm({ className = '' }) {
             </form>
         </section>
     );
+}
+
+UpdatePasswordForm.propTypes = {
+    className: PropTypes.string,
 }

@@ -1,4 +1,6 @@
-import { Head, Link } from '@inertiajs/react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Head, Link, route } from '@inertiajs/react';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const handleImageError = () => {
@@ -262,9 +264,9 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         </h2>
 
                                         <p className="mt-4 text-sm/relaxed">
-                                            Laravel's robust library of
+                                            {`Laravel's robust library of
                                             first-party tools and libraries,
-                                            such as{' '}
+                                            such as`}{' '}
                                             <a
                                                 href="https://forge.laravel.com"
                                                 className="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]"
@@ -359,3 +361,9 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
         </>
     );
 }
+
+Welcome.propTypes = {
+    auth: PropTypes.object.isRequired,
+    laravelVersion: PropTypes.string.isRequired,
+    phpVersion: PropTypes.string.isRequired,
+};

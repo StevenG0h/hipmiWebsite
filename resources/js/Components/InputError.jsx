@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 export default function InputError({ message, className = '', ...props }) {
     return message ? (
         <p
@@ -7,4 +9,9 @@ export default function InputError({ message, className = '', ...props }) {
             {message}
         </p>
     ) : null;
+}
+
+InputError.propTypes = { 
+    message: PropTypes.string,
+    className: PropTypes.string,
 }

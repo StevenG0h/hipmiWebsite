@@ -1,10 +1,10 @@
-import Checkbox from '@/Components/Checkbox';
+import React from 'react';
+import PropTypes from 'prop-types';
 import InputError from '@/Components/InputError';
-import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
-import { Head, Link, useForm } from '@inertiajs/react';
+import { Head, Link, useForm, route } from '@inertiajs/react';
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -140,3 +140,8 @@ export default function Login({ status, canResetPassword }) {
         </GuestLayout>
     );
 }
+
+Login.propTypes = {
+    status: PropTypes.string,
+    canResetPassword: PropTypes.string,
+};

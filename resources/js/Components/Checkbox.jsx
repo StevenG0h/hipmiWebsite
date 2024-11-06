@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 export default function Checkbox({ className = '', ...props }) {
     return (
         <input
@@ -9,4 +11,8 @@ export default function Checkbox({ className = '', ...props }) {
             }
         />
     );
+}
+
+Checkbox.propTypes = {
+    className: PropTypes.string,
 }

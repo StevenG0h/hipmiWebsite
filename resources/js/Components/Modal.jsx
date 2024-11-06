@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
     Dialog,
     DialogPanel,
@@ -63,3 +65,11 @@ export default function Modal({
         </Transition>
     );
 }
+
+Modal.propTypes = {
+    children: PropTypes.node,
+    show: PropTypes.bool,
+    maxWidth: PropTypes.oneOf(['sm', 'md', 'lg', 'xl', '2xl']),
+    closeable: PropTypes.bool,
+    onClose: PropTypes.func,
+};

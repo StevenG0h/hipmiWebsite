@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 export default function SecondaryButton({
     type = 'button',
     className = '',
@@ -19,4 +21,12 @@ export default function SecondaryButton({
             {children}
         </button>
     );
+}
+
+SecondaryButton.propTypes = {
+    type: PropTypes.string,
+    className: PropTypes.string,
+    disabled: PropTypes.bool,
+    children: PropTypes.node,
+    props: PropTypes.object,
 }

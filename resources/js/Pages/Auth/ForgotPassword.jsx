@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import InputError from '@/Components/InputError';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
-import { Head, useForm } from '@inertiajs/react';
+import { Head, useForm, route } from '@inertiajs/react';
 
 export default function ForgotPassword({ status }) {
     const { data, setData, post, processing, errors } = useForm({
@@ -54,3 +55,7 @@ export default function ForgotPassword({ status }) {
         </GuestLayout>
     );
 }
+
+ForgotPassword.propTypes = {
+    status: PropTypes.string,
+};

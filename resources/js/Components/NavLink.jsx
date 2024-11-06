@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from '@inertiajs/react';
 
 export default function NavLink({
@@ -20,4 +22,11 @@ export default function NavLink({
             {children}
         </Link>
     );
+}
+
+NavLink.propTypes = {
+    active: PropTypes.bool,
+    className: PropTypes.string,
+    children: PropTypes.node,
+    props: PropTypes.object,
 }

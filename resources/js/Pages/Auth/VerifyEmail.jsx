@@ -1,6 +1,8 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import PrimaryButton from '@/Components/PrimaryButton';
 import GuestLayout from '@/Layouts/GuestLayout';
-import { Head, Link, useForm } from '@inertiajs/react';
+import { Head, Link, useForm, route } from '@inertiajs/react';
 
 export default function VerifyEmail({ status }) {
     const { post, processing } = useForm({});
@@ -16,10 +18,10 @@ export default function VerifyEmail({ status }) {
             <Head title="Email Verification" />
 
             <div className="mb-4 text-sm text-gray-600">
-                Thanks for signing up! Before getting started, could you verify
+               { `Thanks for signing up! Before getting started, could you verify
                 your email address by clicking on the link we just emailed to
                 you? If you didn't receive the email, we will gladly send you
-                another.
+                another.`}
             </div>
 
             {status === 'verification-link-sent' && (
@@ -48,3 +50,8 @@ export default function VerifyEmail({ status }) {
         </GuestLayout>
     );
 }
+
+VerifyEmail.propTypes = {
+    status: PropTypes.string,
+};
+

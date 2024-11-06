@@ -1,6 +1,5 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import { Link } from '@inertiajs/react';
-
+import React from 'react';
+import PropTypes from 'prop-types';
 export default function Guest({ children }) {
     return (
         <div style={{width:'100%', height: "100vh"}} className="flex bg-gray-100 flex-row justify-center items-center">
@@ -12,3 +11,7 @@ export default function Guest({ children }) {
         </div>
     );
 }
+
+Guest.propTypes = { 
+    children: PropTypes.node,
+};

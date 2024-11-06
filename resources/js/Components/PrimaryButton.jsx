@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 export default function PrimaryButton({
     className = '',
     disabled,
@@ -17,4 +20,11 @@ export default function PrimaryButton({
             {children}
         </button>
     );
+}
+
+PrimaryButton.propTypes = {
+    className: PropTypes.string,
+    disabled: PropTypes.bool,
+    children: PropTypes.node,
+    props: PropTypes.object,
 }

@@ -1,8 +1,10 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
-import { Link, usePage } from '@inertiajs/react';
+import { Link, usePage, route } from '@inertiajs/react';
 import { useState } from 'react';
 
 export default function Authenticated({ header, children }) {
@@ -173,4 +175,9 @@ export default function Authenticated({ header, children }) {
             <main>{children}</main>
         </div>
     );
+}
+
+Authenticated.propTypes = {
+    header: PropTypes.node,
+    children: PropTypes.node.isRequired,
 }

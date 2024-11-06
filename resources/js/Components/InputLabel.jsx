@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 export default function InputLabel({
     value,
     className = '',
@@ -15,4 +18,10 @@ export default function InputLabel({
             {value ? value : children}
         </label>
     );
+}
+
+InputLabel.propTypes = {
+    value: PropTypes.string,
+    className: PropTypes.string,
+    children: PropTypes.node,
 }

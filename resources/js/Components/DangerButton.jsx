@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 export default function DangerButton({
     className = '',
     disabled,
@@ -17,4 +19,11 @@ export default function DangerButton({
             {children}
         </button>
     );
+}
+
+DangerButton.propTypes = { 
+    className: PropTypes.string,
+    disabled: PropTypes.bool,
+    children: PropTypes.node,
+    props: PropTypes.object,
 }

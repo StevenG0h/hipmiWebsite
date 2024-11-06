@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Transition } from '@headlessui/react';
 import { Link } from '@inertiajs/react';
 import { createContext, useContext, useState } from 'react';
@@ -103,5 +105,26 @@ const DropdownLink = ({ className = '', children, ...props }) => {
 Dropdown.Trigger = Trigger;
 Dropdown.Content = Content;
 Dropdown.Link = DropdownLink;
+
+DropdownLink.propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.node,
+    props: PropTypes.object,
+};
+
+Content.propTypes = {
+    align: PropTypes.string,
+    width: PropTypes.string,
+    contentClasses: PropTypes.string,
+    children: PropTypes.node,
+};
+
+Trigger.propTypes = {
+    children: PropTypes.node,
+};
+
+Dropdown.propTypes = {
+    children: PropTypes.node,
+};
 
 export default Dropdown;
